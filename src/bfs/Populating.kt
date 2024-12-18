@@ -22,11 +22,6 @@ class Populating {
 
         return root
     }
-
-    private fun dfs(left: Node?, right: Node?) {
-        if (left == null && right == null) return
-        left!!.next = right
-    }
 }
 
 fun main() {
