@@ -1,19 +1,39 @@
+import java.util.*
+
 class TreeNode(var `val`: Int) {
     var left: TreeNode? = null
     var right: TreeNode? = null
 
     companion object {
-        fun make_3_9_20_15_7(): TreeNode {
-            val root = TreeNode(3)
-            val node1 = TreeNode(9)
-            val node2 = TreeNode(20)
-            val node3 = TreeNode(15)
-            val node4 = TreeNode(7)
 
-            root.left = node1
-            root.right = node2
-            node2.left = node3
-            node2.right = node4
+        fun make_3_9_20_15_7(): TreeNode {
+            return make(listOf(3, 9, 20, null, null, 15, 7))
+        }
+
+        fun make(vararg nums: Int?): TreeNode {
+            return make(nums.toList())
+        }
+
+        fun make(nums: List<Int?>): TreeNode {
+            val root = TreeNode(nums[0]!!)
+
+            val queue = LinkedList<TreeNode>()
+            queue.add(root)
+
+            var i = 1
+            while (queue.isNotEmpty() && i < nums.size) {
+                val polled = queue.poll()
+                nums[i++]?.let {
+                    val left = TreeNode(it)
+                    polled.left = left
+                    queue.add(left)
+                }
+                nums[i++]?.let {
+                    val right = TreeNode(it)
+                    polled.right = right
+                    queue.add(right)
+                }
+            }
 
             return root
         }
