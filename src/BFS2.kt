@@ -1,10 +1,5 @@
 class BFS2 {
 
-    class TreeNode(var `val`: Int) {
-        var left: TreeNode? = null
-        var right: TreeNode? = null
-    }
-
     fun test(root: TreeNode?): Boolean {
         if (root == null) return false
         return recursive(root.left, root.right)

@@ -1,10 +1,5 @@
 class BFS1 {
 
-    class TreeNode(var `val`: Int) {
-        var left: TreeNode? = null
-        var right: TreeNode? = null
-    }
-
     fun test(p: TreeNode?, q: TreeNode?): Boolean {
         if ((p == null) != (q == null)) return false
 

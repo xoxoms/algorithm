@@ -1,6 +1,23 @@
 class TreeNode(var `val`: Int) {
     var left: TreeNode? = null
     var right: TreeNode? = null
+
+    companion object {
+        fun make_3_9_20_15_7(): TreeNode {
+            val root = TreeNode(3)
+            val node1 = TreeNode(9)
+            val node2 = TreeNode(20)
+            val node3 = TreeNode(15)
+            val node4 = TreeNode(7)
+
+            root.left = node1
+            root.right = node2
+            node2.left = node3
+            node2.right = node4
+
+            return root
+        }
+    }
 }
 
 class BalancedBinaryTree {

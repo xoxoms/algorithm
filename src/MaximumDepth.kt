@@ -3,11 +3,6 @@ import kotlin.math.max
 
 class MaximumDepth {
 
-    class TreeNode(var `val`: Int) {
-        var left: TreeNode? = null
-        var right: TreeNode? = null
-    }
-
     fun test(root: TreeNode?): Int {
         val queue = LinkedList<Pair<TreeNode?, Int>>()
         var depth = 0

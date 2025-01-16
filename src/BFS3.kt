@@ -1,10 +1,5 @@
 class BFS3 {
 
-    class TreeNode(var `val`: Int) {
-        var left: TreeNode? = null
-        var right: TreeNode? = null
-    }
-
     fun test(root: TreeNode?): List<List<Int>> {
         if (root == null) return emptyList()
 
