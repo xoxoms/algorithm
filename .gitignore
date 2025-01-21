@@ -33,3 +33,5 @@ bin/
 
 *.html
 .idea
+
+**/src/naver
