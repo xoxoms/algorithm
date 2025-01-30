@@ -2,6 +2,7 @@ package top150
 
 /**
  * 46. Permutations
+ * 1h
  * nums 값을 갖는 inputs라는 set을 만든다.
  * 이전까지의 값을 갖는 prev라는 배열을 만든다.
  * dp 함수를 호출한다.
