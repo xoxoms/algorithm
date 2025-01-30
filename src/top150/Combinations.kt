@@ -4,6 +4,7 @@ import kotlin.math.min
 
 /**
  * 77. Combinations!!
+ * 2h30m
  * 현재 값을 배열에 넣고 dp 호출
  * dp응 답받으면 removeLast 처리
  * 다음 값을 시도
