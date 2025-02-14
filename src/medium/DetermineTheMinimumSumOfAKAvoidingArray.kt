@@ -1,6 +1,7 @@
 package medium
 
 /**
+ * 2829. Determine the Minimum Sum of a k-avoiding Array
  * 결과처리할 리스트의 사이즈와 n이 같을때까지 루핑한다.
  * 제외 셋에 현재값 - k를 넣는다.
  * i가 셋에 포함됐으면 건너뛴다.
