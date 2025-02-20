@@ -24,7 +24,7 @@ class LargestNumber {
                     BigDecimal(s2 + s1).minus(BigDecimal(s1 + s2)).toInt()
                 }
             }
-            .forEach { item -> sb.append(item) }
+            .joinToString("")
 
         return sb.toString()
     }
