@@ -4,7 +4,7 @@ import TreeNode
 import java.util.LinkedList
 
 /**
- * 101. Symmetric Tree
+ * 101. Symmetric Tree !!
  * 50m
  * 풀다보면 easy들이 더 어려운거같다.
  * 내가 해결한 BFS 방식은 연산 속도가 별로다.
@@ -18,6 +18,22 @@ import java.util.LinkedList
 class SymmetricTree {
 
     fun isSymmetric(root: TreeNode?): Boolean {
+        if (root == null) { return false }
+        return check(root.left, root.right)
+    }
+
+    private fun check(left: TreeNode?, right: TreeNode?): Boolean {
+        if (left == null && right == null) {
+            return true
+        }
+        if (left?.`val` != right?.`val`) {
+            return false
+        }
+
+        return check(left?.left, right?.right) && check(left?.right, right?.left)
+    }
+
+    fun isSymmetric2(root: TreeNode?): Boolean {
         if (root == null) { return false }
         val queue = LinkedList<TreeNode?>()
         queue.add(root.left)
