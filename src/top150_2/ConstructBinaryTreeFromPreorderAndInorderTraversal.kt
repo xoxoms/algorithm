@@ -43,11 +43,8 @@ class ConstructBinaryTreeFromPreorderAndInorderTraversal {
             queue.add(current)
 
             if (current == inorder[j]) {
-                if (j + 1 < inorder.size && visited.contains(inorder[++j])) {
-                    while (j + 1 < inorder.size && visited.contains(inorder[j])) {
-                        j++
-                        queue.pollLast()
-                    }
+                while (j + 1 < inorder.size && visited.contains(inorder[++j])) {
+                    queue.pollLast()
                 }
 
                 direction = false
